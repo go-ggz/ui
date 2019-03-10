@@ -9,4 +9,3 @@ custom:
   - files:
     - "files"
     base: "files"
-    prefix: ""
