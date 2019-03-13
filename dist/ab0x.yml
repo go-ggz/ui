@@ -7,9 +7,5 @@ compression:
 
 custom:
   - files:
-    - "files/favicon.ico"
-    - "files/index.html"
+    - "files"
     base: "files"
-  - files:
-    - "files/assets"
-    base: "files/assets"
