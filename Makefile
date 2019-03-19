@@ -7,5 +7,8 @@ generate:
 	fi
 	$(GO) generate ./...
 
+serve:
+	yarn run serve
+
 clean:
 	rm -rf dist/files

@@ -1,10 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+import Home from '@/views/Home.vue';
+import Callback from '@/views/Callback.vue';
+import auth from '@/auth';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -21,5 +23,23 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
+    {
+      path: '/callback',
+      name: 'callback',
+      component: Callback,
+    },
   ],
 });
+
+// very basic "setup" of a global guard
+router.beforeEach((to, from, next) => {
+  if(to.name === 'callback') { // check if "to"-route is "callback" and allow access
+    next();
+  } else if (auth.auth.isAuthenticated()) { // if authenticated allow access
+    next();
+  } else { // trigger auth0 login
+    auth.auth.login();
+  }
+});
+
+export default router;
