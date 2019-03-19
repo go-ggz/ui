@@ -3,12 +3,12 @@ import _Vue from 'vue';
 
 // exchange the object with your own from the setup step above.
 const webAuth = new auth0.WebAuth({
-  domain: 'your_auth0_domain',
-  clientID: 'your_auth0_client',
+  domain: 'appleboy.auth0.com',
+  clientID: 'pW2M5YGmcXaZGM8Gdp29aPGz8JoCjwYH',
   // make sure this line is contains the port: 8080
   redirectUri: 'http://localhost:8080/callback',
   // we will use the api/v2/ to access the user information as payload
-  audience: 'https://' + 'your_auth0_domain' + '/api/v2/',
+  audience: 'https://appleboy.auth0.com/api/v2/',
   responseType: 'token id_token',
   scope: 'openid profile' // define the scopes you want to use
 })
