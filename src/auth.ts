@@ -84,5 +84,4 @@ export default {
     // eslint-disable-next-line
     Vue.prototype.$auth = auth;
   },
-  auth,
 };
