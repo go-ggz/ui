@@ -7,8 +7,16 @@ generate:
 	fi
 	$(GO) generate ./...
 
+.PHONY: serve
 serve:
 	yarn run serve
+
+.PHONY: build
+build:
+	yarn run build
+
+.PHONY: release
+release: build generate
 
 clean:
 	rm -rf dist/files
