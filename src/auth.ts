@@ -52,8 +52,8 @@ const auth = new _Vue({
         localStorage.removeItem('expires_at');
         localStorage.removeItem('user');
         webAuth.logout({
-          returnTo: 'http://SOMEWHERE.ELSE.com', // Allowed logout URL listed in dashboard
-          clientID: 'your_auth0_client_id', // Your client ID
+          returnTo: 'http://localhost:8080', // Allowed logout URL listed in dashboard
+          clientID: 'pW2M5YGmcXaZGM8Gdp29aPGz8JoCjwYH', // Your client ID
         });
       });
     },
