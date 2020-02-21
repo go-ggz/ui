@@ -9,6 +9,6 @@ platform:
 steps:
 - name: release
   pull: always
-  image: node:13
+  image: node:12
   commands:
   - make release
