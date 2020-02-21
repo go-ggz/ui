@@ -11,4 +11,5 @@ steps:
   pull: always
   image: node:12
   commands:
+  - npm install -g node-gyp
   - make release
