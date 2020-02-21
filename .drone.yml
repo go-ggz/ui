@@ -12,3 +12,4 @@ steps:
   image: node:13
   commands:
   - make install
+  - make build
