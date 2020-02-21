@@ -17,6 +17,6 @@ steps:
   image: plugins/gh-pages
   settings:
     username: appleboy
-    ssh_key:
-      from_secret: deploy_key
+    password:
+      from_secret: key
     pages_directory: dist/files
