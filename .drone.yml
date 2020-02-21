@@ -11,5 +11,4 @@ steps:
   pull: always
   image: node:13
   commands:
-  - npm install
-  - npm run build
+  - make install
