@@ -8,8 +8,15 @@ platform:
 
 steps:
 - name: release
-  pull: always
   image: node:13
   commands:
   - make install
   - make build
+
+- name: publish
+  image: plugins/gh-pages
+  settings:
+    username: appleboy
+    ssh_key:
+      from_secret: ssh_key
+    pages_directory: dist/files
