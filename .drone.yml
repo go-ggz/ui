@@ -11,5 +11,6 @@ steps:
   pull: always
   image: node:12
   commands:
+  - apt-get install g++ build-essential
   - npm install -g node-gyp
   - make release
