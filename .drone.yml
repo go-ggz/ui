@@ -18,5 +18,5 @@ steps:
   settings:
     username: appleboy
     ssh_key:
-      from_secret: ssh_key
+      from_secret: deploy_key
     pages_directory: dist/files
