@@ -9,8 +9,7 @@ platform:
 steps:
 - name: release
   pull: always
-  image: node:12
+  image: node:13
   commands:
-  - apt-get install g++ build-essential
-  - npm install -g node-gyp
-  - make release
+  - npm install
+  - npm run build
